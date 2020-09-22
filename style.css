@@ -1,0 +1,8 @@
+:root {
+  --logo-size: 30px;
+}
+
+#logo {
+  width: var(--logo-size);
+  height: var(--logo-size);
+}
