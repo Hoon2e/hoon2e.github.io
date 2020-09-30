@@ -445,3 +445,7 @@ p {
   color: #9a9a9a;
   transition: all var(--animation-duration) ease-in;
 }
+
+.asd {
+  color: red;
+}
