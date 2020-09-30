@@ -424,3 +424,24 @@ p {
 .testimonial__speechBubble a {
   color: red;
 }
+
+#contact {
+  background-color: var(--color-blue);
+}
+
+.contact__email,
+.contact__rights,
+.contact__title {
+  color: white;
+}
+
+.contact__links {
+  font-size: var(--font-large);
+  margin: 24px 0;
+}
+
+.contact__links i:hover {
+  transform: scale(1.1);
+  color: #9a9a9a;
+  transition: all var(--animation-duration) ease-in;
+}
