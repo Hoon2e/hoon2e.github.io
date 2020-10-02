@@ -3,6 +3,7 @@
 const navbar = document.querySelector('#navbar');
 const navbarHeight = navbar.getBoundingClientRect().height;
 const navbarMenu = document.querySelector('.navbar__menu');
+const contactMe = document.querySelector('.home__contact');
 // Make navbar transparent when it is on the top
 document.addEventListener('scroll', () => {
     console.log(window.scrollY);
@@ -22,6 +23,14 @@ navbarMenu.addEventListener('click', (event) => {
     if (link == null)
         return;
 
-    const scrollTo = document.querySelector(link);
-    scrollTo.scrollIntoView({ behavior: "smooth" });
+    ScrollIntoView(link);
 })
+
+contactMe.addEventListener('click', () => {
+    ScrollIntoView('#contact');
+})
+
+function ScrollIntoView(selector) {
+    const scrollTo = document.querySelector(selector);
+    scrollTo.scrollIntoView({ behavior: 'smooth' });
+}
