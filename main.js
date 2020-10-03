@@ -43,3 +43,21 @@ const homeHeight = home.getBoundingClientRect().height;
 document.addEventListener('scroll', () => {
     home.style.opacity = 1 - (window.scrollY / homeHeight);
 })
+
+
+//스크롤 다운일 때 업 버튼 나타남 
+const pageUpBtn = document.querySelector('#pageUpBtn');
+
+document.addEventListener('scroll', () => {
+    if (window.scrollY > homeHeight / 2) {
+        pageUpBtn.classList.add('activePageupBtn');
+    }
+    else {
+        pageUpBtn.classList.remove('activePageupBtn');
+    }
+
+})
+
+pageUpBtn.addEventListener('click', () => {
+    window.scroll({ top: 0, left: 0, behavior: 'smooth' })
+})

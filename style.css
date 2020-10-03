@@ -465,6 +465,24 @@ p {
   transition: all var(--animation-duration) ease-in;
 }
 
+#pageUpBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 50px;
+  font-size: 70px;
+  color: var(--color-blue);
+  cursor: pointer;
+  transition: all var(--animation-duration) ease-in;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#pageUpBtn.activePageupBtn {
+  bottom: 50px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
 @media screen and (max-width: 768px) {
   .navbar__toggle-btn {
     display: block;
