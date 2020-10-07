@@ -24,8 +24,15 @@ navbarMenu.addEventListener('click', (event) => {
     const link = target.dataset.link
     if (link == null)
         return;
-
+    navbarMenu.classList.remove('open');
     ScrollIntoView(link);
+})
+
+//Navbar toggle when mobile mode
+const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
+navbarToggleBtn.addEventListener('click', (e) => {
+    console.log('click');
+    navbarMenu.classList.contains('open') ? navbarMenu.classList.remove('open') : navbarMenu.classList.add('open');
 })
 
 contactMe.addEventListener('click', () => {
