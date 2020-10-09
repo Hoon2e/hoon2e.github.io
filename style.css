@@ -55,6 +55,7 @@ body {
   margin: 0;
   font-family: "Open Sans", sans-serif;
   cursor: default;
+  background: red;
 }
 
 a {
